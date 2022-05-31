@@ -16,11 +16,13 @@ function App() {
           setMode('dark')
           setText('light')
           setToggleText("Enable Light Mode")
+          document.body.style.backgroundColor ="black"
 
         }
         else{
           setMode('light')
           setText('dark')
+          document.body.style.backgroundColor ="white"
           setToggleText("Enable Dark Mode")
         }
     }
@@ -30,7 +32,10 @@ function App() {
     <>
        {/* <Navbar title="Textutils" aboutext="aboutext" />   */}
        <Navbar title="TitleUtils" mode={mode} toggleMode={toggleMode} toggleText={toggleText} text={text}/> 
-       {/* <div className='container'><TextForm heading="Please enter your String"/></div>  */}
+
+       <div className='container'>
+         <TextForm heading="Please enter your String"/>  
+       </div> 
        {/* <About/> */}
        
     </>
